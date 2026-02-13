@@ -35,11 +35,20 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 2rem;
+}
+
+.ensemble-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex: 1;
 }
 
 .nav-links a {
