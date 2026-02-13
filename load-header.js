@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Determine the correct path to header.html based on current directory depth
+    let headerPath = 'header.html';
+    const pathParts = window.location.pathname.split('/').filter(p => p);
+    
+    // If we're in a subdirectory (e.g., /ueber-uns/), use ../header.html
+    if (pathParts.length > 0) {
+        headerPath = '../header.html';
+    }
+    
     // Load header from header.html
-    fetch('header.html')
+    fetch(headerPath)
         .then(response => response.text())
         .then(data => {
             const headerPlaceholder = document.getElementById('header-placeholder');
