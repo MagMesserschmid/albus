@@ -218,6 +218,20 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.project-with-poster {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.project-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Audio Items */
 .audio-item {
     margin-bottom: 2.5rem;
@@ -352,6 +366,10 @@ footer a:hover {
     }
     
     .concert-with-poster {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-with-poster {
         grid-template-columns: 1fr;
     }
 }
